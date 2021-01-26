@@ -1,0 +1,26 @@
+{
+  "buildpacks": [
+    {
+      "url": "heroku/chromedriver"
+    },
+    {
+      "url": "heroku/google-chrome"
+    },
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "environments": {
+    "test": {
+      "addons":[
+        "heroku-postgresql"
+      ],
+      "scripts": {
+        "test": "bundle exec rspec"
+      }
+    }
+  }
+}
